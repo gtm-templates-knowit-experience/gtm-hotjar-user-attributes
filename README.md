@@ -1,0 +1,1 @@
+# gtm-hotjar-user-attributes
