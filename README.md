@@ -6,9 +6,9 @@ This Tag for **Google Tag Manager (Web)** is an unofficial Template for [**Hotja
 ## Tag Settings
 ### User ID Settings
 ### Only track Users with User ID
-If selected, User Attributes will only be tracked for Users with an User ID. You must input your own User ID with this setting.
+If selected, User Attributes will only be tracked for Users with a User ID. You must input your own User ID with this setting.
 
-If User Attributes are missing on some parts of the site, but User ID available, User ID will still be collected on this part of the site even if User Attributes are missing.
+If User Attributes are missing on some parts of the site, but User ID available, User ID will still be collected on this part of the site.
 
 ### Track all Users
 If selected, User Attributes will be tracked for all Users, whether they have a User ID or not.
@@ -25,15 +25,15 @@ This Tag should always be triggered after the Hotjar Tag. One way is to add this
 
 If you are using this Tag on a **SPA site** (Single Page Application), Hotjar recommends that you make an [**Identify API call on every route**](https://help.hotjar.com/hc/en-us/articles/360061197694-User-Attributes-FAQs#FAQ_3).
 
-This means translated to this Tag that every change that happens on the site that may update/change you User Attributes, should trigger this Tag. That could be a **History Change Event**, **Login Event**, **Signup Event** and more.
+This means translated to this Tag, that every change that happens on the site that may update/change User Attributes should trigger the HOtjar User Attribute Tag. That could be a **History Change Event**, **Login Event**, **Signup Event** and more.
 
 ## Tag Failure Message
-If you test the Hotjar User Attributes Tag in **Google Tag Manager Preview/Debug Mode**, you may experience to see a failure message as shown below. No User Attributes will be collected if the Tag shows a failure message.
+If you test the Hotjar User Attributes Tag in **Google Tag Manager Preview/Debug Mode**, you may experience to see a failure message as shown below. No User Attributes will be collected if the Tag fails/shows a failure message.
 
 ![Hotjar User Attributes Tag Failure](https://github.com/gtm-templates-knowit-experience/gtm-hotjar-user-attributes/blob/main/images/hotjar-user-attributes-tag-failed.png)
 
 ### Failure Message occurs when "Only track Users with User ID" is selected
-If you have selected to only track Users with an User ID, and you are previewing without a User ID (you aren't logged into the site), you will get the failure message.
+If you have selected to only track Users with a User ID, and you are previewing without a User ID (you aren't logged into the site), you will get the failure message.
 
 ### Failure Message occurs when "Track all Users" is selected
-If you have selected to track all Users (also those without an User ID), and you are previewing when no User Attributes are available on the page, you will get the failure message.
+If you have selected to track all Users (also those without a User ID), and you are previewing when no User Attributes are available on the page, you will get the failure message.
