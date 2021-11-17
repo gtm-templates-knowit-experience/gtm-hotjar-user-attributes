@@ -1,5 +1,5 @@
 # Hotjar User Attributes - Web Tag
-[**Hotjar User Attributes**](https://help.hotjar.com/hc/en-us/articles/4402892526487-What-are-User-Attributes-) is a Tag Template for **Google Tag Manager (Web)**. This is an unofficial Template, and not made by Hotjar.
+**Hotjar User Attributes** is a Tag Template for **Google Tag Manager (Web)**. This is an unofficial Template for [**Hotjar User Attributes**](https://help.hotjar.com/hc/en-us/articles/4402892526487-What-are-User-Attributes-), and not made by Hotjar.
 
 ![Hotjar User Attributes Tag](https://github.com/gtm-templates-knowit-experience/gtm-hotjar-user-attributes/blob/main/images/hotjar-user-attributes-tag.png)
 
