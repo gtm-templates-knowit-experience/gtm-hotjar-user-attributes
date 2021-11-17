@@ -14,11 +14,6 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "Hotjar User Attributes",
-  "categories": [
-    "ANALYTICS",
-    "UTILITY",
-    "TAG_MANAGEMENT"
-  ],
   "brand": {
     "id": "brand_dummy",
     "displayName": "",
