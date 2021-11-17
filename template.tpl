@@ -65,12 +65,40 @@ ___TEMPLATE_PARAMETERS___
       },
       {
         "type": "TEXT",
-        "name": "userId",
+        "name": "userIdOnly",
+        "displayName": "User ID",
+        "simpleValueType": true,
+        "alwaysInSummary": true,
+        "help": "You must input your own User ID with this setting.",
+        "enablingConditions": [
+          {
+            "paramName": "userIdSetting",
+            "paramValue": "only",
+            "type": "EQUALS"
+          }
+        ],
+        "valueValidators": [
+          {
+            "type": "NON_EMPTY",
+            "errorMessage": "The User ID value must not be empty."
+          }
+        ]
+      },
+      {
+        "type": "TEXT",
+        "name": "userIdAll",
         "displayName": "User ID",
         "simpleValueType": true,
         "alwaysInSummary": true,
         "help": "Input your own User ID (recommended). Do not send PII as User Attributes unless you have a User ID.",
-        "notSetText": "Do not send PII as User Attributes unless you have a User ID."
+        "notSetText": "Do not send PII as User Attributes unless you have a User ID.",
+        "enablingConditions": [
+          {
+            "paramName": "userIdSetting",
+            "paramValue": "all",
+            "type": "EQUALS"
+          }
+        ]
       }
     ]
   },
@@ -126,29 +154,38 @@ ___TEMPLATE_PARAMETERS___
     "alwaysInSummary": true,
     "valueValidators": [
       {
-        "type": "NON_EMPTY"
+        "type": "NON_EMPTY",
+        "errorMessage": "User Attributes must not be empty."
       }
     ],
     "newRowButtonText": "Add User Attribute",
-    "help": "See \u003ca href\u003d\"https://help.hotjar.com/hc/en-us/articles/4402892526487\" target\u003d\"_blank\"\u003eHotjar information about User Attributes\u003c/a\u003e."
+    "help": "See Hotjar Help Text for \u003ca href\u003d\"https://help.hotjar.com/hc/en-us/articles/4402892526487\" https://help.hotjar.com/hc/en-us/articles/360061197694-User-Attributes-FAQs#sent_pii\u003einformation about User Attributes\u003c/a\u003e."
   }
 ]
 
 
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
+const JSON = require('JSON');
 const makeTableMap = require('makeTableMap');
 const setInWindow = require('setInWindow');
 const createArgumentsQueue = require('createArgumentsQueue');
 const hj = createArgumentsQueue('hj', 'hj.q');
 
-const userId = data.userIdSetting === 'only' ? data.userId : data.userId || null;
+const userIdSetting = data.userIdSetting;
+const userId = data.userIdOnly ? data.userIdOnly : data.userIdAll || null;
 const userAttributes = data.userAttributes ? makeTableMap(data.userAttributes, 'userAttributeName', 'userAttributeValue'): {};
 
-if(userAttributes && typeof userId !== "undefined") {
-  hj('identify', userId, userAttributes); 
+function isEmpty(obj) {
+  return JSON.stringify(obj) === '{}';
 }
-data.gtmOnSuccess();
+
+if((!isEmpty(userAttributes) && userIdSetting === 'all') || (userIdSetting === 'only' && userId)) { 
+  hj('identify', userId, userAttributes);
+  data.gtmOnSuccess();
+} else {
+  data.gtmOnFailure();
+}
 
 
 ___WEB_PERMISSIONS___
