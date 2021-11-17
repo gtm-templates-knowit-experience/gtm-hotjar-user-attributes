@@ -23,7 +23,9 @@ This Tag should always be triggered after the Hotjar Tag. One way is to add this
 
 ![Hotjar Tag with Hotjar User Attributes Tag as Cleanup Tag](https://github.com/gtm-templates-knowit-experience/gtm-hotjar-user-attributes/blob/main/images/hotjar-tag-with-hotjar-user-attributes-cleanup-tag.png)
 
-If you are using this Tag on a **SPA site** (Single Page Application), Hotjar recommends that you make an [**Identify API call on every route**](https://help.hotjar.com/hc/en-us/articles/360061197694-User-Attributes-FAQs#FAQ_3). This means translated to this Tag that every change that happens on the site that may update/change you User Attributes, should trigger this Tag. That could be a **History Change Event**, **Login Event**, **Signup Event** and more.
+If you are using this Tag on a **SPA site** (Single Page Application), Hotjar recommends that you make an [**Identify API call on every route**](https://help.hotjar.com/hc/en-us/articles/360061197694-User-Attributes-FAQs#FAQ_3).
+
+This means translated to this Tag that every change that happens on the site that may update/change you User Attributes, should trigger this Tag. That could be a **History Change Event**, **Login Event**, **Signup Event** and more.
 
 ## Tag Failure Message
 If you test the Hotjar User Attributes Tag in **Google Tag Manager Preview/Debug Mode**, you may experience to see a failure message as shown below. No User Attributes will be collected if the Tag shows a failure message.
