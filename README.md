@@ -1,4 +1,4 @@
-# Hotjar User Attributes - Web Tag
+# Hotjar User Attributes - GTM Tag (Web)
 **Hotjar User Attributes** is a Tag Template for **Google Tag Manager (Web)**. This is an unofficial Template for [**Hotjar User Attributes**](https://help.hotjar.com/hc/en-us/articles/4402892526487-What-are-User-Attributes-), and not made by Hotjar.
 
 ![Hotjar User Attributes Tag](https://github.com/gtm-templates-knowit-experience/gtm-hotjar-user-attributes/blob/main/images/hotjar-user-attributes-tag.png)
@@ -6,9 +6,9 @@
 ## Tag Settings
 ### User ID Settings
 ### Only track Users with User ID
-If selected, User Attributes will only be tracked for Users with a User ID. You must input your own User ID with this setting.
+If selected, User Attributes will only be tracked for Users with a User ID. You must input your own User ID with this setting. See [**Hotjar FAQ about handling User IDs**](https://help.hotjar.com/hc/en-us/articles/360033640653-Identify-API-Reference#handling-user-ids).
 
-If User Attributes are missing on some parts of the site, but User ID available, User ID will still be collected on this part of the site.
+If User Attributes are missing on some parts of the site, but User ID is available, User ID will still be collected on this part of the site.
 
 ### Track all Users
 If selected, User Attributes will be tracked for all Users, whether they have a User ID or not.
@@ -16,7 +16,7 @@ If selected, User Attributes will be tracked for all Users, whether they have a 
 Do not send PII as User Attributes unless you have a User ID. [**See Hotjar FAQ**](https://help.hotjar.com/hc/en-us/articles/360061197694-User-Attributes-FAQs#sent_pii).
 
 ### User Attributes
-Type in **User Attribute Name(s)** and select **User Attribute Value(s)** from the Variable dropdown.
+Type in **User Attribute Name(s)** and select [**User Attribute Value(s)**](https://help.hotjar.com/hc/en-us/articles/360033640653#user-attribute-values) from the Variable dropdown.
 
 ## Tag Setup in Google Tag Manager
 This Tag should always be triggered after the Hotjar Tag. One way is to add this Tag as a **Cleanup Tag** to your **Hotjar Tag** as shown in the image. The User Attributes Tag is named **Hotjar User Attributes - CT** in the image (**CT** is an abbreviation for Custom Template).
