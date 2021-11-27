@@ -1,0 +1,6 @@
+homepage: "https://github.com/gtm-templates-knowit-experience/"
+documentation: "https://github.com/gtm-templates-knowit-experience/gtm-hotjar-user-attributes"
+versions:
+  # Latest version
+  - sha: 6d935d92c57329234251ac821868935dd7681b97
+    changeNotes: Initial release.
