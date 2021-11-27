@@ -1,5 +1,5 @@
 # Hotjar User Attributes - GTM Tag (Web)
-**Hotjar User Attributes** is a Tag Template for **Google Tag Manager (Web)**. This is an unofficial Template for [**Hotjar User Attributes**](https://help.hotjar.com/hc/en-us/articles/4402892526487-What-are-User-Attributes-), and not made by Hotjar. Hotjar do not  provide any support in using this Template.
+**Hotjar User Attributes** is a Tag Template for **Google Tag Manager (Web)**. This is an unofficial Template for [**Hotjar User Attributes**](https://help.hotjar.com/hc/en-us/articles/4402892526487-What-are-User-Attributes-), and not made by Hotjar. Hotjar do not  provide any support for this Template.
 
 ![Hotjar User Attributes Tag](https://github.com/gtm-templates-knowit-experience/gtm-hotjar-user-attributes/blob/main/images/hotjar-user-attributes-tag.png)
 
@@ -18,7 +18,7 @@ Do not collect PII (Personal Identifiable Information) as User Attributes unless
 ### User Attributes
 Type in **User Attribute Name(s)** and select [**User Attribute Value(s)**](https://help.hotjar.com/hc/en-us/articles/360033640653#user-attribute-values) from the Variable dropdown.
 
-User Attributes have to be filled out.
+User Attributes must be filled out.
 
 ## Tag Setup in Google Tag Manager
 This Tag should always be triggered after the Hotjar Tag. One way is to add this Tag as a **Cleanup Tag** to your **Hotjar Tag** as shown in the image. The User Attributes Tag is named **Hotjar User Attributes - CT** in the image (**CT** is an abbreviation for Custom Template).
